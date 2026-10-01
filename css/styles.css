@@ -1,0 +1,669 @@
+/* ========================== */
+/* GLOBAL STYLES */
+/* ========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 120%;
+    font-weight: 600;
+    color: rgb(40, 40, 40);
+}
+p {
+    font-size: 0.875rem;
+    line-height: 140%;
+    font-weight: 500;
+    color: rgb(120, 120, 120);
+}
+main {
+    width: 100%;
+    max-width: 80rem;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+label {
+    width: fit-content;
+    font-size: 0.875rem;
+    line-height: 120%;
+    font-weight: 500;
+    color: rgb(120, 120, 120);
+}
+hr {
+    flex: 1;
+    border: none;
+    border-top: 1px solid rgb(230, 230, 230);
+}
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* ========================== */
+/* CUSTOMIZE STYLES */
+/* ========================== */
+/* TYPOGRAPHY */
+.text-sm {
+    font-size: 0.75rem;
+}
+.text-base {
+    font-size: 0.875rem;
+}
+.text-lg {
+    font-size: 1rem;
+}
+.text-xl {
+    font-size: 1.125rem;
+}
+.text-2xl {
+    font-size: 1.25rem;
+}
+.text-3xl {
+    font-size: 1.5rem;
+}
+.text-4xl {
+    font-size: 1.875rem;
+}
+.text-5xl {
+    font-size: 2.25rem;
+}
+
+/* COMPONENTS */
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+}
+.main-header {
+    width: 100%;
+    display: flex;
+}
+.btn {
+    width: 100%;
+    padding-inline: 1.5rem;
+    padding-block: 0.75rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: rgb(230, 230, 230);
+    font-size: 0.875rem;
+    line-height: 120%;
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+}
+.has-icon {
+    padding-right: 3rem !important;
+}
+.has-text {
+    padding-left: 3rem !important;
+}
+.input-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.input-icon {
+    position: absolute;
+    right: 0.75rem;
+    cursor: pointer;
+}
+.input-text {
+    position: absolute;
+    left: 0.75rem;
+    line-height: normal;
+    color: rgb(0, 0, 0);
+}
+.icon {
+    width: 1.25rem;
+}
+.navbar {
+    width: 100%;
+    padding-inline: 1rem;
+    padding-block: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgb(230, 230, 230);
+    background-color: rgb(255, 255, 255);
+    z-index: 10;
+}
+.nav-section {
+    display: none;
+    gap: 2rem;
+    align-items: center;
+}
+.profile {
+    width: 2.25rem;
+    height: 2.25rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+.form-input {
+    width: 100%;
+    padding: 0.75rem;
+    outline: none;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    line-height: 120%;
+    font-weight: 500;
+    color: black;
+}
+.form-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* AUTHENTICATION */
+.auth-card {
+    width: 100%;
+    max-width: 36rem;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 0.75rem;
+}
+.auth-card-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    text-align: center;
+}
+.auth-card-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.auth-forgot-link {
+    font-size: 0.875rem;
+    line-height: 120%;
+    font-weight: 500;
+    color: rgb(120, 120, 120);
+    text-decoration: none;
+    text-align: end;
+}
+.auth-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.btn-auth-google {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.action-divider {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* HOME PAGE */
+.hero-section {
+    width: 100%;
+    padding-inline: 1rem;
+    padding-block: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: rgb(40, 40, 40);
+    background-image: url(../assets/images/preview.jpg);
+    background-size: cover;
+    background-blend-mode: overlay;
+    border-radius: 0.75rem;
+    text-align: center;
+}
+.hero-section > * {
+    width: 100%;
+    max-width: 60rem;
+    color: rgb(255, 255, 255);
+}
+.hero-cta {
+    width: fit-content;
+    color: rgb(40, 40, 40);
+}
+.section-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+.section-categories {
+    display: flex;
+    gap: 1rem;
+    overflow: auto;
+    white-space: nowrap;
+}
+.section-categories > button {
+    padding-block: 1rem;
+    border: none;
+    border-bottom: 3px solid transparent;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(120, 120, 120);
+    cursor: pointer;
+}
+.section-categories > button#active {
+    border-bottom: 3px solid rgb(120, 120, 120);
+}
+.section-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+.course-card {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 0.75rem;
+}
+.course-card > .course-card-container {
+    display: flex;
+    gap: 1rem;
+}
+.course-card-image {
+    width: 6rem;
+    height: 6rem;
+    aspect-ratio: 1 / 1;
+}
+.course-card-image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+.course-card-main {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.course-card-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+.course-card-header > p {
+    display: none;
+}
+.course-card-creator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.course-card-creator > img {
+    width: 2.25rem;
+    height: 2.25rem;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+.course-card-creator > .creator {
+    display: flex;
+    flex-direction: column;
+}
+.course-card-creator > .creator > .creator-name {
+    color: rgb(40, 40, 40);
+}
+.course-card-creator > .creator > .creator-position {
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+.course-card-creator > .creator > .creator-position > .work {
+    display: none;
+}
+.course-card-footer {
+    display: flex;
+    justify-content: space-between;
+}
+.course-card-footer > .rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.course-card-footer > .rating > .rating-star {
+    display: flex;
+}
+.course-card-footer > .rating > .rating-star > img {
+    width: 1.25rem;
+}
+.course-card-footer > .rating > p {
+    font-size: 0.875rem;
+    font-weight: 400;
+    text-decoration: underline;
+}
+.course-card-footer > .price {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.cta-section {
+    width: 100%;
+    padding-inline: 1rem;
+    padding-block: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background-color: rgb(40, 40, 40);
+    background-image: url(../assets/images/preview.jpg);
+    background-size: cover;
+    background-blend-mode: overlay;
+    border-radius: 0.75rem;
+    text-align: center;
+}
+.cta-section > * {
+    width: 100%;
+    max-width: 32rem;
+}
+.cta-section > .cta-header {
+    display: flex;
+    flex-direction: column;
+}
+.cta-section > .cta-header > p {
+    font-weight: 400;
+    color: rgb(230, 230, 230);
+}
+.cta-section > .cta-header > div > .header-main {
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+}
+.cta-section > .cta-header > div > .header-description {
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+}
+.cta-section > form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.cta-section > form > input {
+    width: 100%;
+    padding-inline: 1.5rem;
+    padding-block: 0.75rem;
+    outline: none;
+    border: transparent;
+    background-color: rgb(230, 230, 230);
+    border-radius: 0.5rem;
+}
+.cta-section > form > button {
+    padding-inline: 1.5rem;
+    padding-block: 0.75rem;
+    outline: none;
+    border: transparent;
+    border-radius: 0.5rem;
+    background-color: rgb(255, 255, 255);
+    color: rgb(40, 40, 40);
+}
+.footer-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgb(230, 230, 230);
+}
+.footer-section > .footer-container {
+    width: 100%;
+    max-width: 80rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2.5rem;
+}
+.footer-section > .footer-container > .footer-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+.footer-section > .footer-container > .footer-header > .footer-header-main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.footer-section > .footer-container > .footer-header > .footer-header-main > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.footer-section > .footer-container > .footer-header > .footer-header-main > div > p {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: rgb(40, 40, 40);
+}
+.footer-section > .footer-container > .footer-header > .footer-header-main > div > address {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.footer-section > .footer-container > .footer-header > .footer-header-main > div > address > * {
+    font-weight: 400;
+    font-style: normal;
+}
+.footer-section > .footer-container > .footer-header > .footer-header-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.footer-section > .footer-container > .footer-header > .footer-header-navigation > nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.footer-section > .footer-container > .footer-header > .footer-header-navigation > nav > .navigation-title {
+    font-size: 1.125rem;
+}
+.footer-section > .footer-container > .footer-header > .footer-header-navigation > nav > ul {
+    display: none;
+}
+.footer-section > .footer-container > .footer-header > .footer-header-navigation > nav > ul > li > a {
+    text-decoration: none;
+    font-weight: 500;
+    color: rgb(40, 40, 40);
+    color: rgb(120, 120, 120);
+}
+.footer-section > .footer-container > .copyright-media {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+.footer-section > .footer-container > .copyright-media > .social-media {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+.footer-section > .footer-container > .copyright-media > .social-media > img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+
+/* ========================== */
+/* RESPONSIVE */
+/* ========================== */
+@media (min-width: 640px) {
+    main {
+        padding: 5rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+    .navbar {
+        padding-inline: 5rem;
+    }
+    .logo {
+        font-size: 2rem;
+    }
+    .auth-card {
+        padding: 2.5rem;
+    }
+    .text-base {
+        font-size: 1rem;
+    }
+    .text-lg {
+        font-size: 1.125rem;
+    }
+    .text-xl {
+        font-size: 1.25rem;
+    }
+    .text-2xl {
+        font-size: 1.5rem;
+    }
+    .text-3xl {
+        font-size: 1.875rem;
+    }
+    .text-4xl {
+        font-size: 2.25rem;
+    }
+    .text-5xl {
+        font-size: 3rem;
+    }
+    .auth-forgot-link {
+        font-size: 1rem;
+    }
+    .btn {
+        font-size: 1rem;
+    }
+    .icon {
+        width: 1.5rem;
+    }
+    .form-input {
+        font-size: 1rem;
+    }
+    .input-text {
+        line-height: 140%;
+    }
+    .navbar > .nav-section {
+        display: flex;
+    }
+    .navbar > .icon {
+        display: none;
+    }
+    .hero-section {
+        padding: 6rem;
+    }
+    .course-card > .course-card-container {
+        flex-direction: column;
+    }
+    .course-card-header > p {
+        overflow: hidden;
+        line-clamp: 2;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+    .course-card-image {
+        width: auto;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+    .course-card-creator > .creator > .creator-position > .work {
+        display: inline;
+    }
+    .cta-section {
+        padding: 6rem;
+    }
+    .cta-section > form {
+        flex-direction: row;
+        padding: 0.5rem;
+        background-color: rgb(230, 230, 230);
+        border-radius: 0.5rem;
+    }
+    .cta-section > form > input {
+        padding-inline: 0.5rem;
+        padding-block: 0;
+    }
+    .cta-section > form > button {
+        background-color: rgb(40, 40, 40);
+        color: rgb(255, 255, 255);
+    }
+}
+
+@media (min-width: 768px) {
+    .section-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+    .footer-section > .footer-container {
+        padding-inline: 5rem;
+        padding-block: 2.5rem;
+    }
+    .footer-section > .footer-container > .footer-header {
+        flex-direction: row;
+    }
+    .footer-section > .footer-container > .footer-header > .footer-header-navigation {
+        flex-direction: row;
+        gap: 4rem;
+    }
+    .footer-section > .footer-container > .footer-header > .footer-header-navigation > nav {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .footer-section > .footer-container > .footer-header > .footer-header-navigation > nav > .navigation-title {
+        font-size: 1rem;
+    }
+    .footer-section > .footer-container > .footer-header > .footer-header-navigation > nav > ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        list-style-type: none;
+    }
+    .footer-section > .footer-container > .footer-header > .footer-header-navigation > nav > img {
+        display: none;
+    }
+    .footer-section > .footer-container > .copyright-media {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    .section-cards {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
